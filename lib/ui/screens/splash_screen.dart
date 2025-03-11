@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_management_ui/ui/screens/login_screen.dart';
+import 'package:task_management_ui/ui/utils/assets_path..dart';
+import 'package:task_management_ui/ui/widgets/screen_background.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,9 +13,25 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    _moveToNextScreen();
+  }
+
+  Future<void> _moveToNextScreen() async {
+    await Future.delayed(Duration(seconds: 2));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SvgPicture.asset('assets/images/background.svg', fit: BoxFit.cover,),
-      );
+      body: ScreenBackground(
+        child: Center(child: SvgPicture.asset(AssetsPath.logoSvg, width: 120),),
+      ),
+    );
   }
 }
