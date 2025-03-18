@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:task_management_ui/ui/screens/forgot_password_verify_screen.dart';
+import 'package:task_management_ui/ui/screens/register_screen.dart';
 import 'package:task_management_ui/ui/widgets/screen_background.dart';
 
 import 'login_screen.dart';
