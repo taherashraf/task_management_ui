@@ -97,8 +97,6 @@ class _ForgotPasswordVerifyEmailScreenState
     );
   }
 
-  void _onTapForgotPasswordButton() {}
-
   void _onTapSignInButton() {
     Navigator.pop(context);
   }
