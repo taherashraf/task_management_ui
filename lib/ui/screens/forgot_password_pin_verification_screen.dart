@@ -113,7 +113,6 @@ class _ForgotPasswordPinVerificationScreenState
     );
   }
 
-
   void _onTapSignInButton() {
     Navigator.pushAndRemoveUntil(
       context,
