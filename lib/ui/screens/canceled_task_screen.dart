@@ -23,7 +23,7 @@ class _CanceledTaskScreenState extends State<CanceledTaskScreen> {
                     description: 'Description will be here',
                     date: '18/3/25',
                     chipText: 'Canceled',
-                    chipColor: Colors.red.shade700);
+                  taskStatus: TaskStatus.cancelled,);
               },
               separatorBuilder: (context, index) =>
               const SizedBox(height: 8,),),

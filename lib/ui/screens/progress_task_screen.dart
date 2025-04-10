@@ -22,8 +22,8 @@ class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
                 return TaskCard(title: 'Progress title will be Here',
                     description: 'Description will be here',
                     date: '18/3/25',
-                    chipText: 'Progress',
-                    chipColor: Colors.purple);
+                    chipText: 'Progress', taskStatus: TaskStatus.progress,
+                   );
               },
               separatorBuilder: (context, index) =>
               const SizedBox(height: 8,),),

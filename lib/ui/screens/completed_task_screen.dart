@@ -23,7 +23,7 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
                     description: 'Description will be here',
                     date: '18/3/25',
                     chipText: 'Completed',
-                    chipColor: Colors.green);
+                    taskStatus: TaskStatus.completed,);
               },
               separatorBuilder: (context, index) =>
               const SizedBox(height: 8,),),

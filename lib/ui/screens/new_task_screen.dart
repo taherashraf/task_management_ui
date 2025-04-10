@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_management_ui/ui/screens/add_new_task_screen.dart';
 import 'package:task_management_ui/ui/widgets/summary_card.dart';
 import 'package:task_management_ui/ui/widgets/task_card.dart';
 
@@ -24,7 +25,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                     description: 'Description will be here',
                     date: '18/3/25',
                     chipText: 'New',
-                    chipColor: Colors.blue);
+                  taskStatus: TaskStatus.sNew,);
               },
               separatorBuilder: (context, index) =>
               const SizedBox(height: 8,),),
@@ -32,10 +33,14 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: _onTapAddNewTask,
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  void _onTapAddNewTask () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddNewTaskScreen(),),);
   }
 
   Widget _buildSummarySection() {
